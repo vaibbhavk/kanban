@@ -1,0 +1,38 @@
+{% extends 'base.html' %} {% block main %}
+<div class="mb-4 text-center">
+  <small class="text-muted h2">Add a Card</small>
+</div>
+<form
+  class="row needs-validation"
+  novalidate
+  action="/card/add/{{list_id}}"
+  method="POST"
+  id="add-list-form"
+>
+  <label for="title" class="form-label">Title</label>
+  <div class="input-group mb-3">
+    <input type="text" id="title" name="title" class="form-control" />
+  </div>
+
+  <label for="content" class="form-label">Content</label>
+  <div class="input-group mb-3">
+    <input type="text" id="content" name="content" class="form-control" />
+  </div>
+
+  <label for="deadline" class="form-label">Deadline</label>
+  <div class="input-group mb-3">
+    <input type="date" id="deadline" name="deadline" class="form-control" />
+  </div>
+
+  <label for="done" class="form-label">Completed</label>
+  <div class="input-group mb-3">
+    <select class="form-select" id="done" name="done">
+      <option value="0" selected>No</option>
+      <option value="1">Yes</option>
+    </select>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Add</button>
+</form>
+
+{% endblock main %}

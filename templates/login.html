@@ -1,0 +1,33 @@
+{% extends 'user_base.html' %} {% block content %}
+<div class="mb-4 text-center">
+  <small class="text-muted h2">Login</small>
+</div>
+<form
+  class="row needs-validation"
+  novalidate
+  action="/login"
+  method="POST"
+  id="login-form"
+>
+  <label for="username" class="form-label">Username</label>
+  <div class="input-group mb-3">
+    <input type="text" id="username" name="username" class="form-control" />
+  </div>
+
+  <label for="password" class="form-label">Password</label>
+  <div class="input-group mb-3">
+    <input type="password" id="password" name="password" class="form-control" />
+  </div>
+
+  <div class="col-12 mb-3">
+    <button class="btn btn-outline-dark" type="submit">Login</button>
+  </div>
+
+  <div>
+    <label for="does-not-exist" class="form-label"
+      >Do not have an account?</label
+    >
+    <a href="/register" id="does-not-exist" class="link">Register</a>
+  </div>
+</form>
+{% endblock content %}

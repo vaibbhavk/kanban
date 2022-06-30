@@ -1,0 +1,43 @@
+{% extends 'user_base.html' %} {% block content %}
+<div class="mb-4 text-center">
+  <small class="text-muted h2">Register</small>
+</div>
+<form
+  class="row needs-validation"
+  novalidate
+  action="/register"
+  method="POST"
+  id="register-form"
+>
+  <label for="email" class="form-label">Email</label>
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      id="email"
+      name="email"
+      class="form-control"
+      aria-label="Email"
+    />
+    <span class="input-group-text">@example.com</span>
+  </div>
+
+  <label for="username" class="form-label">Username</label>
+  <div class="input-group mb-3">
+    <input type="text" id="username" name="username" class="form-control" />
+  </div>
+
+  <label for="password" class="form-label">Password</label>
+  <div class="input-group mb-3">
+    <input type="password" id="password" name="password" class="form-control" />
+  </div>
+  <div class="col-12 mb-3">
+    <button class="btn btn-outline-dark" type="submit">Register</button>
+  </div>
+  <div>
+    <label for="already-exist" class="form-label"
+      >Already have an account?</label
+    >
+    <a href="/login" id="already-exist" class="link">Login</a>
+  </div>
+</form>
+{% endblock content %}

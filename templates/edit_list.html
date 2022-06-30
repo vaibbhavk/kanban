@@ -1,0 +1,25 @@
+{% extends 'base.html' %} {% block main %}
+<div class="mb-4 text-center">
+  <small class="text-muted h2">Edit a List</small>
+</div>
+<form
+  class="row needs-validation"
+  novalidate
+  action="/list/edit/{{list.list_id}}"
+  method="POST"
+  id="edit-list-form"
+>
+  <label for="name" class="form-label">Name</label>
+  <div class="input-group mb-3">
+    <input
+      type="text"
+      id="name"
+      name="name"
+      value="{{list.name}}"
+      class="form-control"
+    />
+    <button type="submit" class="btn btn-primary">Update</button>
+  </div>
+</form>
+
+{% endblock main %}

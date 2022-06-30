@@ -6,7 +6,7 @@ class User(db.Model):
     user_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     email = db.Column(db.String, unique=True, nullable=False)
     username = db.Column(db.String, unique=True, nullable=False)
-    password = db.Column(db.String, unique=True, nullable=False)
+    password = db.Column(db.String, nullable=False)
 
 
 class List(db.Model):

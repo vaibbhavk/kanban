@@ -1,3 +1,5 @@
 venv
 
 kanban_database.sqlite3
+
+.env

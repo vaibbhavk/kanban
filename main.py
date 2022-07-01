@@ -1,5 +1,4 @@
 from flask import Flask
-from flask_restful import Api
 from application.database import db
 import os
 from dotenv import load_dotenv

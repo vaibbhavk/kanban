@@ -7,7 +7,6 @@ from dotenv import load_dotenv
 app = None
 
 load_dotenv()
-# os.environ.get("SECRET")
 
 
 def create_app():
@@ -32,4 +31,4 @@ from application.controllers import *
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()

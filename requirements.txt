@@ -1,5 +1,4 @@
 Flask
-flask-restful
 Flask-SQLAlchemy
 gunicorn
 python-dotenv
